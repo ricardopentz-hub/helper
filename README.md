@@ -1,13 +1,18 @@
-// Helper README
+# HelperApp
 
-This repository now contains a rudimentary SwiftUI iOS app named "HelperApp".
+This repository now contains an enhanced SwiftUI iOS app named "HelperApp".
 
-Details:
-- Platform: iOS
+What's included in this update:
+- Tab-based SwiftUI app (Home / Tasks / Settings)
+- Tasks: add, toggle complete, delete; tasks persist locally using UserDefaults (JSON-encoded)
+- Home: greeting, quick tips and simple counter
+- Settings: shows bundle ID and app version, a UI-only toggle stored with @AppStorage
 - Deployment target: iOS 16.1
-- SwiftUI App lifecycle
 - Bundle identifier: com.ricardopentz-hub.helper
 
-To open the project in Xcode, open HelperApp.xcodeproj.
+How to open:
+- Open `HelperApp.xcodeproj` in Xcode 14+ and run on a simulator or device after setting a signing team.
 
-Note: This is a minimal template intended to be a starting point. You may want to add icons, localized assets, and adjust signing settings in Xcode.
+Notes:
+- You can upload custom app icons later to `HelperApp/Assets.xcassets`.
+- Signing & provisioning must be configured in Xcode to run on a physical device.

@@ -1,0 +1,249 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	ingerprint = "";
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXProject section */
+		1D6058900D05DD3D006BFB54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1420;
+				ORGANIZATIONNAME = "";
+			};
+			buildConfigurationList = 1D6058910D05DD3D006BFB54 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1D6058920D05DD3D006BFB54;
+			productRefGroup = 1D6058930D05DD3D006BFB54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058940D05DD3D006BFB54 /* HelperApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXGroup section */
+		1D6058920D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D6058950D05DD3D006BFB54 /* HelperApp */,
+				1D6058930D05DD3D006BFB54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+
+		1D6058950D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D6058960D05DD3D006BFB54 /* HelperAppApp.swift */,
+				1D6058970D05DD3D006BFB54 /* ContentView.swift */,
+				1D6058980D05DD3D006BFB54 /* Assets.xcassets */,
+				1D6058990D05DD3D006BFB54 /* Info.plist */,
+				1D60589A0D05DD3D006BFB54 /* Base.lproj */,
+			);
+			name = "HelperApp";
+			sourceTree = "<group>";
+		};
+
+		1D60589A0D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D60589B0D05DD3D006BFB54 /* LaunchScreen.storyboard */,
+			);
+			name = Base.lproj;
+			sourceTree = "<group>";
+		};
+
+		1D6058930D05DD3D006BFB54 = {
+			isa = PBXGroup;
+			children = (
+				1D60589C0D05DD3D006BFB54 /* HelperApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXFileReference section */
+		1D6058960D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = "HelperAppApp.swift";
+			path = "HelperApp/HelperAppApp.swift";
+			sourceTree = "<group>";
+		};
+
+		1D6058970D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			name = "ContentView.swift";
+			path = "HelperApp/ContentView.swift";
+			sourceTree = "<group>";
+		};
+
+		1D6058980D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			name = "Assets.xcassets";
+			path = "HelperApp/Assets.xcassets";
+			sourceTree = "<group>";
+		};
+
+		1D6058990D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			name = "Info.plist";
+			path = "HelperApp/Info.plist";
+			sourceTree = "<group>";
+		};
+
+		1D60589B0D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = file.storyboard;
+			name = "LaunchScreen.storyboard";
+			path = "HelperApp/Base.lproj/LaunchScreen.storyboard";
+			sourceTree = "<group>";
+		};
+
+		1D60589C0D05DD3D006BFB54 = {
+			isa = PBXFileReference;
+			lastKnownFileType = wrapper.application;
+			name = "HelperApp.app";
+			path = "";
+			sourceTree = "BUILT_PRODUCTS_DIR";
+		};
+/* End PBXFileReference section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60589D0D05DD3D006BFB54 = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589E0D05DD3D006BFB54 /* HelperAppApp.swift in Sources */,
+				1D60589F0D05DD3D006BFB54 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXBuildFile section */
+		1D60589E0D05DD3D006BFB54 = {isa = PBXBuildFile; fileRef = 1D6058960D05DD3D006BFB54; };
+		1D60589F0D05DD3D006BFB54 = {isa = PBXBuildFile; fileRef = 1D6058970D05DD3D006BFB54; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D6058A00D05DD3D006BFB54 = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1D6058A10D05DD3D006BFB54 = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D6058A20D05DD3D006BFB54 /* Assets.xcassets in Resources */,
+				1D6058A30D05DD3D006BFB54 /* LaunchScreen.storyboard in Resources */,
+				1D6058A40D05DD3D006BFB54 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXBuildFile for resources */
+		1D6058A20D05DD3D006BFB54 = {isa = PBXBuildFile; fileRef = 1D6058980D05DD3D006BFB54; };
+		1D6058A30D05DD3D006BFB54 = {isa = PBXBuildFile; fileRef = 1D60589B0D05DD3D006BFB54; };
+		1D6058A40D05DD3D006BFB54 = {isa = PBXBuildFile; fileRef = 1D6058990D05DD3D006BFB54; };
+/* End PBXBuildFile for resources */
+
+/* Begin PBXTargetDependency section */
+		/* none */
+/* End PBXTargetDependency section */
+
+/* Begin PBXNativeTarget section */
+		1D6058940D05DD3D006BFB54 = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058A50D05DD3D006BFB54 /* Build configuration list for PBXNativeTarget "HelperApp" */;
+			buildPhases = (
+				1D60589D0D05DD3D006BFB54,
+				1D6058A00D05DD3D006BFB54,
+				1D6058A10D05DD3D006BFB54,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "HelperApp";
+			productName = "HelperApp";
+			productReference = 1D60589C0D05DD3D006BFB54 /* HelperApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058910D05DD3D006BFB54 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "HelperApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricardopentz-hub.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+
+		1D6058A60D05DD3D006BFB54 = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "HelperApp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ricardopentz-hub.helper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+		1D6058A50D05DD3D006BFB54 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058910D05DD3D006BFB54,
+				1D6058A60D05DD3D006BFB54,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+
+		1D6058A70D05DD3D006BFB54 = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058910D05DD3D006BFB54,
+				1D6058A60D05DD3D006BFB54,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+
+/* End XCBuildConfiguration section */
+
+	};
+	rootObject = 1D6058900D05DD3D006BFB54;
+}

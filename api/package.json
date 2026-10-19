@@ -1,0 +1,15 @@
+{
+  "name": "helper-vercel-api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "vercel dev",
+    "test": "echo \"no tests\""
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.33.0",
+    "jose": "^4.16.0",
+    "node-fetch": "^3.4.1"
+  }
+}

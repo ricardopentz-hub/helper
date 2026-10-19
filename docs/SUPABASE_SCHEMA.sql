@@ -1,4 +1,4 @@
--- Supabase schema for Helper app (notes table + RLS policy)
+-- Supabase schema for Helper app (notes table + RLS policy + profiles table)
 
 -- Create notes table
 create table if not exists public.notes (
@@ -20,3 +20,11 @@ create policy "users_can_modify_own_notes" on public.notes
 
 -- Index for updated_at to make sync queries efficient
 create index if not exists notes_updated_at_idx on public.notes (updated_at desc);
+
+-- Profiles table to map external provider ids (Apple) to app profiles
+create table if not exists public.profiles (
+  id uuid primary key default gen_random_uuid(),
+  apple_sub text unique,
+  email text,
+  created_at timestamptz default now()
+);

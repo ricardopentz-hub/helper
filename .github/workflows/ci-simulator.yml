@@ -1,0 +1,47 @@
+name: CI — Simulator Build & Test
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  build-on-simulator:
+    # Läuft nur, wenn das PR gemerged wurde und Ziel-Branch main ist
+    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' }}
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Xcode
+        # macOS runner kommt mit Xcode; du kannst eine bestimmte Xcode-Version verlangen, z.B. xcode-14.2
+        run: swift --version
+
+      - name: Install dependencies (if any)
+        run: |
+          # TODO: Falls du Swift Package Manager, CocoaPods oder andere Abhängigkeiten verwendest, füge hier die Installation ein.
+          # Beispiel (CocoaPods):
+          # if [ -f "Podfile" ]; then
+          #   sudo gem install cocoapods
+          #   pod install --repo-update
+          # fi
+          echo "No dependency step configured"
+
+      - name: Build on iOS Simulator
+        run: |
+          # Ersetze ggf. das Simulatormodell oder die OS-Version
+          xcodebuild -project HelperApp.xcodeproj -scheme HelperApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1' clean build | xcpretty || cat
+
+      - name: Run tests on iOS Simulator (optional)
+        run: |
+          # Falls Testtargets vorhanden sind, führe die Tests aus. Ohne Testtargets schlägt dieser Schritt fehl — entferne ihn dann.
+          xcodebuild -project HelperApp.xcodeproj -scheme HelperApp -destination 'platform=iOS Simulator,name=iPhone 14,OS=16.1' clean test | xcpretty || cat
+
+      - name: Upload build logs (artifact)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: xcode-build-logs
+          path: |
+            ./DerivedData || true

@@ -1,0 +1,55 @@
+name: CI — Build and Test after PR merge to main
+
+on:
+  pull_request:
+    types: [closed]
+
+jobs:
+  build-and-test:
+    # Läuft nur, wenn das PR gemerged wurde und das Ziel die 'main' Branch ist
+    if: ${{ github.event.pull_request.merged == true && github.event.pull_request.base.ref == 'main' }}
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v4
+        with:
+          # Wir checken explizit die main-Branch aus, damit der Workflow auf dem Merge-Commit läuft
+          ref: refs/heads/main
+
+      # --- Beispiel-Setups (auskommentiert) ---
+      # Node.js Beispiel:
+      # - uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '18'
+      # - run: npm ci
+      # - run: npm test
+
+      # Python Beispiel:
+      # - uses: actions/setup-python@v4
+      #   with:
+      #     python-version: '3.11'
+      # - run: python -m pip install -r requirements.txt
+      # - run: pytest -q
+
+      # Java (Gradle) Beispiel:
+      # - uses: actions/setup-java@v4
+      #   with:
+      #     distribution: temurin
+      #     java-version: '17'
+      # - run: ./gradlew build
+
+      - name: Build
+        run: |
+          # TODO: Ersetze den folgenden Befehl durch deinen Build-Befehl
+          make build
+
+      - name: Test
+        run: |
+          # TODO: Ersetze den folgenden Befehl durch deinen Test-Befehl
+          make test
+
+      - name: Post actions (optional)
+        if: always()
+        run: |
+          echo "Optional: Artefakte hochladen, Test-Reports sammeln oder Benachrichtigungen senden"

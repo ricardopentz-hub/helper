@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-label="Winter mountain background">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#dfeeff"/>
+      <stop offset="35%" stop-color="#bfdcff"/>
+      <stop offset="100%" stop-color="#f4f8ff"/>
+    </linearGradient>
+    <linearGradient id="mountainBack" x1="0" x2="1">
+      <stop offset="0%" stop-color="#93abc6"/>
+      <stop offset="100%" stop-color="#6a7f9d"/>
+    </linearGradient>
+    <linearGradient id="mountainFront" x1="0" x2="1">
+      <stop offset="0%" stop-color="#4f637f"/>
+      <stop offset="100%" stop-color="#2d415d"/>
+    </linearGradient>
+    <linearGradient id="snow" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#eaf4ff"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="800" fill="url(#sky)"/>
+  <circle cx="1020" cy="140" r="52" fill="#fff7d6" opacity="0.9"/>
+  <g opacity="0.95">
+    <path d="M0,540 L200,300 L340,500 L470,250 L610,520 L720,350 L920,500 L980,420 L1200,540 L1200,800 L0,800 Z" fill="url(#mountainBack)"/>
+    <path d="M0,620 L180,430 L310,620 L460,360 L620,640 L760,470 L950,620 L1040,560 L1200,620 L1200,800 L0,800 Z" fill="url(#mountainFront)"/>
+    <path d="M530,360 L650,250 L760,360 L650,360 Z" fill="url(#snow)"/>
+    <path d="M320,540 L420,420 L520,540 Z" fill="url(#snow)"/>
+    <path d="M820,600 L900,500 L990,600 Z" fill="url(#snow)"/>
+  </g>
+
+  <g opacity="0.8">
+    <path d="M0,690 C120,650 180,650 260,690 C330,725 390,725 470,692 C545,660 650,660 725,690 C815,725 900,726 980,690 C1080,650 1140,650 1200,692 L1200,800 L0,800 Z" fill="#edf4ff"/>
+    <path d="M0,720 C120,700 210,695 300,720 C380,742 470,744 570,716 C655,690 760,692 845,718 C930,744 1045,742 1125,720 C1160,710 1185,706 1200,704 L1200,800 L0,800 Z" fill="#dfefff"/>
+  </g>
+
+  <g opacity="0.75">
+    <circle cx="180" cy="170" r="2" fill="#ffffff"/>
+    <circle cx="230" cy="130" r="2" fill="#ffffff"/>
+    <circle cx="300" cy="175" r="2" fill="#ffffff"/>
+    <circle cx="360" cy="120" r="2" fill="#ffffff"/>
+    <circle cx="420" cy="170" r="2" fill="#ffffff"/>
+    <circle cx="490" cy="145" r="2" fill="#ffffff"/>
+  </g>
+</svg>

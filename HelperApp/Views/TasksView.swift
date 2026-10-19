@@ -22,10 +22,8 @@ struct TasksView: View {
                 .padding()
 
                 if store.tasks.isEmpty {
-                    EmptyStateView(title: "Keine Aufgaben", message: "Füge deine erste Aufgabe hinzu.") {
-                        // focus the text field: not available easily without Coordinator; keep simple
-                    }
-                    .padding()
+                    EmptyStateView(title: "Keine Aufgaben", message: "Füge deine erste Aufgabe hinzu.")
+                        .padding()
                     Spacer()
                 } else {
                     List {
@@ -34,10 +32,16 @@ struct TasksView: View {
                                 withAnimation { store.toggle(task) }
                             }
                             .swipeActions(edge: .trailing) {
-                                Button(role: .destructive) { if let idx = store.tasks.firstIndex(of: task) { store.tasks.remove(at: idx) } } label: { Label("Delete", systemImage: "trash") }
+                                Button(role: .destructive) {
+                                    if let idx = store.tasks.firstIndex(of: task) { store.tasks.remove(at: idx) }
+                                } label: {
+                                    Label("Delete", systemImage: "trash")
+                                }
                             }
                         }
-                        .onMove(perform: store.move)
+                        .onMove(perform: { source, destination in
+                            store.move(from: source, to: destination)
+                        })
                         .onDelete(perform: store.remove)
                     }
                     .listStyle(.insetGrouped)
@@ -59,9 +63,7 @@ struct TasksView: View {
     }
 }
 
-struct TasksView_Previews: PreviewProvider {
-    static var previews: some View {
-        TasksView()
-            .environmentObject(TaskStore())
-    }
+#Preview {
+    TasksView()
+        .environmentObject(TaskStore())
 }
